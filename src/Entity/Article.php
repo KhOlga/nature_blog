@@ -22,12 +22,12 @@ class Article
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, unique=true)
      */
     private $slug;
 
     /**
-     * @ORM\Column(type="text", nullable=true, unique=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $content;
 
@@ -36,7 +36,7 @@ class Article
      */
     private $publishedAt;
 
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -49,6 +49,7 @@ class Article
     public function setTitle(string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
 
@@ -60,6 +61,7 @@ class Article
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
+
         return $this;
     }
 
@@ -71,6 +73,7 @@ class Article
     public function setContent(?string $content): self
     {
         $this->content = $content;
+
         return $this;
     }
 
@@ -82,8 +85,7 @@ class Article
     public function setPublishedAt(?\DateTimeInterface $publishedAt): self
     {
         $this->publishedAt = $publishedAt;
+
         return $this;
     }
-
-
 }

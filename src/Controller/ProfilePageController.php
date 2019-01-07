@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class ProfilePageController extends AbstractController
 {
     /**
@@ -12,11 +13,14 @@ class ProfilePageController extends AbstractController
      */
     public function index()
     {
+
         return $this->render('profile_page/index.html.twig', [
             'controller_name' => 'ProfilePageController',
             'number' => $number = random_int(0, 100),
         ]);
     }
+
+
 
 
 }
