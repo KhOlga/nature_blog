@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark navbar-bg mb-5">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-bg {{ app.session.flashbag.peek('success')|length > 0 ? '' : 'mb-5' }}">
     <a style="margin-left: 75px;" class="navbar-brand space-brand" href="{{ path('app_homepage') }}">Nature Blog</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,7 +51,7 @@
 
 <footer class="footer">
     <div class="container text-center">
-        <span class="text-muted">Made with <i class="fa fa-heart" style="color: red;"></i> by the guys and gals at <a href="https://knpuniversity.com">KnpUniversity</a></span>
+        <span class="text-muted">Made with <i class="fa fa-heart" style="color: red;"></i> for study Symfony framework by Kharabet Olha</a></span>
     </div>
 </footer>
 
@@ -64,5 +64,11 @@
         $('.dropdown-toggle').dropdown();
     </script>
 {% endblock %}
+{% for message in app.flashes('success') %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+
 </body>
 </html>
