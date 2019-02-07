@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
+<div class="container">
     <h1>All Articles</h1>
     <table class="table">
         <thead>
@@ -21,5 +21,8 @@
         {% endfor %}
         </tbody>
     </table>
+    <a href="/admin/article/new" class="btn btn-primary" role="button">Create new article!</a>
+
+</div>
 {% endblock %}
 
