@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dbadb15580903e96bc1c3b3cf3f1950",
+    "content-hash": "9568e9675c07448edef12d6ed934da4e",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -57,6 +57,62 @@
                 "stream_filter_register"
             ],
             "time": "2017-08-18T09:54:01+00:00"
+        },
+        {
+            "name": "composer/ca-bundle",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "558f321c52faeb4828c03e7dc0cfe39a09e09a2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/558f321c52faeb4828c03e7dc0cfe39a09e09a2d",
+                "reference": "558f321c52faeb4828c03e7dc0cfe39a09e09a2d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^5.3.2 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
+                "psr/log": "^1.0",
+                "symfony/process": "^2.5 || ^3.0 || ^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "time": "2019-01-28T09:30:10+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1585,6 +1641,84 @@
             "time": "2018-01-15T00:49:33+00:00"
         },
         {
+            "name": "monolog/monolog",
+            "version": "1.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2018-11-05T09:00:11+00:00"
+        },
+        {
             "name": "nexylan/slack",
             "version": "v2.1.0",
             "source": {
@@ -2902,6 +3036,52 @@
                 "controllers"
             ],
             "time": "2018-12-11T16:59:23+00:00"
+        },
+        {
+            "name": "sensiolabs/security-checker",
+            "version": "v5.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/security-checker.git",
+                "reference": "46be3f58adac13084497961e10eed9a7fb4d44d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/46be3f58adac13084497961e10eed9a7fb4d44d1",
+                "reference": "46be3f58adac13084497961e10eed9a7fb4d44d1",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "php": ">=5.5.9",
+                "symfony/console": "~2.7|~3.0|~4.0"
+            },
+            "bin": [
+                "security-checker"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SensioLabs\\Security\\": "SensioLabs/Security"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien.potencier@gmail.com"
+                }
+            ],
+            "description": "A security checker for your composer.lock",
+            "time": "2018-12-19T17:14:59+00:00"
         },
         {
             "name": "symfony/asset",
@@ -4295,6 +4475,137 @@
             "time": "2018-10-03T12:03:19+00:00"
         },
         {
+            "name": "symfony/monolog-bridge",
+            "version": "v4.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/monolog-bridge.git",
+                "reference": "82fb71292d65c0ef6e59825a7b4827f8162b03a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/monolog-bridge/zipball/82fb71292d65c0ef6e59825a7b4827f8162b03a0",
+                "reference": "82fb71292d65c0ef6e59825a7b4827f8162b03a0",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "~1.19",
+                "php": "^7.1.3",
+                "symfony/contracts": "^1.0",
+                "symfony/http-kernel": "~3.4|~4.0"
+            },
+            "conflict": {
+                "symfony/console": "<3.4",
+                "symfony/http-foundation": "<3.4"
+            },
+            "require-dev": {
+                "symfony/console": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~3.4|~4.0",
+                "symfony/security-core": "~3.4|~4.0",
+                "symfony/var-dumper": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/console": "For the possibility to show log messages in console commands depending on verbosity settings.",
+                "symfony/event-dispatcher": "Needed when using log messages in console commands.",
+                "symfony/http-kernel": "For using the debugging handlers together with the response life cycle of the HTTP kernel.",
+                "symfony/var-dumper": "For using the debugging handlers like the console handler or the log server handler."
+            },
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bridge\\Monolog\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Monolog Bridge",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-29T09:49:29+00:00"
+        },
+        {
+            "name": "symfony/monolog-bundle",
+            "version": "v3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/monolog-bundle.git",
+                "reference": "572e143afc03419a75ab002c80a2fd99299195ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/572e143afc03419a75ab002c80a2fd99299195ff",
+                "reference": "572e143afc03419a75ab002c80a2fd99299195ff",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "~1.22",
+                "php": ">=5.6",
+                "symfony/config": "~2.7|~3.3|~4.0",
+                "symfony/dependency-injection": "~2.7|~3.4.10|^4.0.10",
+                "symfony/http-kernel": "~2.7|~3.3|~4.0",
+                "symfony/monolog-bridge": "~2.7|~3.3|~4.0"
+            },
+            "require-dev": {
+                "symfony/console": "~2.7|~3.3|~4.0",
+                "symfony/phpunit-bridge": "^3.3|^4.0",
+                "symfony/yaml": "~2.7|~3.3|~4.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\MonologBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony MonologBundle",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "time": "2018-11-04T09:58:13+00:00"
+        },
+        {
             "name": "symfony/options-resolver",
             "version": "v4.2.3",
             "source": {
@@ -4856,6 +5167,87 @@
             "time": "2019-01-29T09:49:29+00:00"
         },
         {
+            "name": "symfony/security",
+            "version": "v4.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/security.git",
+                "reference": "1d2c62c246ee0891d04f48218314a5bd040ce46e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/security/zipball/1d2c62c246ee0891d04f48218314a5bd040ce46e",
+                "reference": "1d2c62c246ee0891d04f48218314a5bd040ce46e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/contracts": "^1.0",
+                "symfony/event-dispatcher": "~3.4|~4.0",
+                "symfony/http-foundation": "~3.4|~4.0",
+                "symfony/http-kernel": "~3.4|~4.0",
+                "symfony/property-access": "~3.4|~4.0"
+            },
+            "replace": {
+                "symfony/security-core": "self.version",
+                "symfony/security-csrf": "self.version",
+                "symfony/security-guard": "self.version",
+                "symfony/security-http": "self.version"
+            },
+            "require-dev": {
+                "psr/container": "^1.0",
+                "psr/log": "~1.0",
+                "symfony/expression-language": "~3.4|~4.0",
+                "symfony/finder": "~3.4|~4.0",
+                "symfony/ldap": "~3.4|~4.0",
+                "symfony/polyfill-intl-icu": "~1.0",
+                "symfony/routing": "~3.4|~4.0",
+                "symfony/validator": "~3.4|~4.0"
+            },
+            "suggest": {
+                "psr/container-implementation": "To instantiate the Security class",
+                "symfony/expression-language": "For using the expression voter",
+                "symfony/form": "",
+                "symfony/ldap": "For using the LDAP user and authentication providers",
+                "symfony/routing": "For using the HttpUtils class to create sub-requests, redirect the user, and match URLs",
+                "symfony/validator": "For using the user password constraint"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Security\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Core/Tests/",
+                    "/Csrf/Tests/",
+                    "/Guard/Tests/",
+                    "/Http/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Security Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-02-01T10:47:37+00:00"
+        },
+        {
             "name": "symfony/security-bundle",
             "version": "v4.2.3",
             "source": {
@@ -4940,252 +5332,6 @@
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
             "time": "2019-01-16T20:35:37+00:00"
-        },
-        {
-            "name": "symfony/security-core",
-            "version": "v4.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/security-core.git",
-                "reference": "615be3016bb362f4b39feec3210da4efddd6c24a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-core/zipball/615be3016bb362f4b39feec3210da4efddd6c24a",
-                "reference": "615be3016bb362f4b39feec3210da4efddd6c24a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/contracts": "^1.0"
-            },
-            "require-dev": {
-                "psr/container": "^1.0",
-                "psr/log": "~1.0",
-                "symfony/event-dispatcher": "~3.4|~4.0",
-                "symfony/expression-language": "~3.4|~4.0",
-                "symfony/http-foundation": "~3.4|~4.0",
-                "symfony/ldap": "~3.4|~4.0",
-                "symfony/validator": "~3.4|~4.0"
-            },
-            "suggest": {
-                "psr/container-implementation": "To instantiate the Security class",
-                "symfony/event-dispatcher": "",
-                "symfony/expression-language": "For using the expression voter",
-                "symfony/http-foundation": "",
-                "symfony/ldap": "For using LDAP integration",
-                "symfony/validator": "For using the user password constraint"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Security\\Core\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Security Component - Core Library",
-            "homepage": "https://symfony.com",
-            "time": "2019-02-01T10:47:37+00:00"
-        },
-        {
-            "name": "symfony/security-csrf",
-            "version": "v4.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/security-csrf.git",
-                "reference": "385dcfcd6cf02e0b8d10524bd072169be2d5494b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-csrf/zipball/385dcfcd6cf02e0b8d10524bd072169be2d5494b",
-                "reference": "385dcfcd6cf02e0b8d10524bd072169be2d5494b",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/security-core": "~3.4|~4.0"
-            },
-            "conflict": {
-                "symfony/http-foundation": "<3.4"
-            },
-            "require-dev": {
-                "symfony/http-foundation": "~3.4|~4.0"
-            },
-            "suggest": {
-                "symfony/http-foundation": "For using the class SessionTokenStorage."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Security\\Csrf\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Security Component - CSRF Library",
-            "homepage": "https://symfony.com",
-            "time": "2019-01-16T20:31:39+00:00"
-        },
-        {
-            "name": "symfony/security-guard",
-            "version": "v4.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/security-guard.git",
-                "reference": "219a34c70dd243771a67cb05041c928d909d2104"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-guard/zipball/219a34c70dd243771a67cb05041c928d909d2104",
-                "reference": "219a34c70dd243771a67cb05041c928d909d2104",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/security-core": "~3.4|~4.0",
-                "symfony/security-http": "~3.4|~4.0"
-            },
-            "require-dev": {
-                "psr/log": "~1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Security\\Guard\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Security Component - Guard",
-            "homepage": "https://symfony.com",
-            "time": "2019-01-29T09:49:29+00:00"
-        },
-        {
-            "name": "symfony/security-http",
-            "version": "v4.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/security-http.git",
-                "reference": "b564efb51c5355bd83e3aad231a0d87a307002ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-http/zipball/b564efb51c5355bd83e3aad231a0d87a307002ad",
-                "reference": "b564efb51c5355bd83e3aad231a0d87a307002ad",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/event-dispatcher": "~3.4|~4.0",
-                "symfony/http-foundation": "~3.4|~4.0",
-                "symfony/http-kernel": "~3.4|~4.0",
-                "symfony/property-access": "~3.4|~4.0",
-                "symfony/security-core": "~3.4|~4.0"
-            },
-            "conflict": {
-                "symfony/security-csrf": "<3.4.11|~4.0,<4.0.11"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/routing": "~3.4|~4.0",
-                "symfony/security-csrf": "^3.4.11|^4.0.11"
-            },
-            "suggest": {
-                "symfony/routing": "For using the HttpUtils class to create sub-requests, redirect the user, and match URLs",
-                "symfony/security-csrf": "For using tokens to protect authentication/logout attempts"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Security\\Http\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Security Component - HTTP Integration",
-            "homepage": "https://symfony.com",
-            "time": "2019-01-16T21:31:25+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -5760,62 +5906,6 @@
     ],
     "packages-dev": [
         {
-            "name": "composer/ca-bundle",
-            "version": "1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "558f321c52faeb4828c03e7dc0cfe39a09e09a2d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/558f321c52faeb4828c03e7dc0cfe39a09e09a2d",
-                "reference": "558f321c52faeb4828c03e7dc0cfe39a09e09a2d",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "ext-pcre": "*",
-                "php": "^5.3.2 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
-                "psr/log": "^1.0",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\CaBundle\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                }
-            ],
-            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
-            "keywords": [
-                "cabundle",
-                "cacert",
-                "certificate",
-                "ssl",
-                "tls"
-            ],
-            "time": "2019-01-28T09:30:10+00:00"
-        },
-        {
             "name": "doctrine/data-fixtures",
             "version": "v1.3.1",
             "source": {
@@ -5989,84 +6079,6 @@
             "time": "2018-07-27T15:41:37+00:00"
         },
         {
-            "name": "monolog/monolog",
-            "version": "1.24.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "psr/log": "~1.0"
-            },
-            "provide": {
-                "psr/log-implementation": "1.0.0"
-            },
-            "require-dev": {
-                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
-                "doctrine/couchdb": "~1.0@dev",
-                "graylog2/gelf-php": "~1.0",
-                "jakub-onderka/php-parallel-lint": "0.9",
-                "php-amqplib/php-amqplib": "~2.4",
-                "php-console/php-console": "^3.1.3",
-                "phpunit/phpunit": "~4.5",
-                "phpunit/phpunit-mock-objects": "2.3.0",
-                "ruflin/elastica": ">=0.90 <3.0",
-                "sentry/sentry": "^0.13",
-                "swiftmailer/swiftmailer": "^5.3|^6.0"
-            },
-            "suggest": {
-                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
-                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
-                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-                "ext-mongo": "Allow sending log messages to a MongoDB server",
-                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
-                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
-                "php-console/php-console": "Allow sending log messages to Google Chrome",
-                "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-                "sentry/sentry": "Allow sending log messages to a Sentry server"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Monolog\\": "src/Monolog"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                }
-            ],
-            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
-            "homepage": "http://github.com/Seldaek/monolog",
-            "keywords": [
-                "log",
-                "logging",
-                "psr-3"
-            ],
-            "time": "2018-11-05T09:00:11+00:00"
-        },
-        {
             "name": "nikic/php-parser",
             "version": "v4.2.0",
             "source": {
@@ -6116,51 +6128,6 @@
                 "php"
             ],
             "time": "2019-01-12T16:31:37+00:00"
-        },
-        {
-            "name": "sensiolabs/security-checker",
-            "version": "v4.1.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "dc270d5fec418cc6ac983671dba5d80ffaffb142"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/dc270d5fec418cc6ac983671dba5d80ffaffb142",
-                "reference": "dc270d5fec418cc6ac983671dba5d80ffaffb142",
-                "shasum": ""
-            },
-            "require": {
-                "composer/ca-bundle": "^1.0",
-                "symfony/console": "~2.7|~3.0|~4.0"
-            },
-            "bin": [
-                "security-checker"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "SensioLabs\\Security": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien.potencier@gmail.com"
-                }
-            ],
-            "description": "A security checker for your composer.lock",
-            "time": "2018-02-28T22:10:01+00:00"
         },
         {
             "name": "symfony/debug-bundle",
@@ -6293,137 +6260,6 @@
                 "scaffolding"
             ],
             "time": "2019-01-17T02:02:27+00:00"
-        },
-        {
-            "name": "symfony/monolog-bridge",
-            "version": "v4.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/monolog-bridge.git",
-                "reference": "82fb71292d65c0ef6e59825a7b4827f8162b03a0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bridge/zipball/82fb71292d65c0ef6e59825a7b4827f8162b03a0",
-                "reference": "82fb71292d65c0ef6e59825a7b4827f8162b03a0",
-                "shasum": ""
-            },
-            "require": {
-                "monolog/monolog": "~1.19",
-                "php": "^7.1.3",
-                "symfony/contracts": "^1.0",
-                "symfony/http-kernel": "~3.4|~4.0"
-            },
-            "conflict": {
-                "symfony/console": "<3.4",
-                "symfony/http-foundation": "<3.4"
-            },
-            "require-dev": {
-                "symfony/console": "~3.4|~4.0",
-                "symfony/event-dispatcher": "~3.4|~4.0",
-                "symfony/security-core": "~3.4|~4.0",
-                "symfony/var-dumper": "~3.4|~4.0"
-            },
-            "suggest": {
-                "symfony/console": "For the possibility to show log messages in console commands depending on verbosity settings.",
-                "symfony/event-dispatcher": "Needed when using log messages in console commands.",
-                "symfony/http-kernel": "For using the debugging handlers together with the response life cycle of the HTTP kernel.",
-                "symfony/var-dumper": "For using the debugging handlers like the console handler or the log server handler."
-            },
-            "type": "symfony-bridge",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bridge\\Monolog\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Monolog Bridge",
-            "homepage": "https://symfony.com",
-            "time": "2019-01-29T09:49:29+00:00"
-        },
-        {
-            "name": "symfony/monolog-bundle",
-            "version": "v3.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "572e143afc03419a75ab002c80a2fd99299195ff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/572e143afc03419a75ab002c80a2fd99299195ff",
-                "reference": "572e143afc03419a75ab002c80a2fd99299195ff",
-                "shasum": ""
-            },
-            "require": {
-                "monolog/monolog": "~1.22",
-                "php": ">=5.6",
-                "symfony/config": "~2.7|~3.3|~4.0",
-                "symfony/dependency-injection": "~2.7|~3.4.10|^4.0.10",
-                "symfony/http-kernel": "~2.7|~3.3|~4.0",
-                "symfony/monolog-bridge": "~2.7|~3.3|~4.0"
-            },
-            "require-dev": {
-                "symfony/console": "~2.7|~3.3|~4.0",
-                "symfony/phpunit-bridge": "^3.3|^4.0",
-                "symfony/yaml": "~2.7|~3.3|~4.0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bundle\\MonologBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony MonologBundle",
-            "homepage": "http://symfony.com",
-            "keywords": [
-                "log",
-                "logging"
-            ],
-            "time": "2018-11-04T09:58:13+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",

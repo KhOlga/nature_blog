@@ -1,0 +1,35 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: okharabet
+ * Date: 01.03.2019
+ * Time: 17:30
+ */
+
+namespace App\DataFixtures;
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\Persistence\ObjectManager;
+
+abstract class BaseFixture extends Fixture
+{
+    /** @var ObjectManager */
+    private $manager;
+
+    abstract protected function loadData(ObjectManager $manager);
+
+    public function load(ObjectManager $manager)
+    {
+        $this->loadData($manager);
+    }
+
+    protected function createMany(string $className, int $count, callable $factory)
+    {
+        for ($i = 0; $i < $count; $i++) {
+            $entity = new $className();
+            $factory($entity, $i);
+            $this->manager->persist($entity);
+            // store for usage later as App\Entity\ClassName_#COUNT#
+            $this->addReference($className . '_' . $i, $entity);
+        }
+    }
+}
