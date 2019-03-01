@@ -10,6 +10,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
 use App\Repository\UserRepository;
+use Symfony\Component\Security\Core\Security;
 
 
 class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
@@ -37,15 +38,23 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
     }
     public function getCredentials(Request $request)
     {
-       return [
+        $credentials = [
             'email' => $request->request->get('email'),
             'password' => $request->request->get('password'),
         ];
+        $request->getSession()->set(
+            Security::LAST_USERNAME,
+            $credentials['email']
+        );
+
+        return $credentials;
     }
+
     public function getUser($credentials, UserProviderInterface $userProvider)
     {
         return $this->userRepository->findOneBy(['email' => $credentials['email']]);
     }
+
     public function checkCredentials($credentials, UserInterface $user)
     {
         // only needed if we need to check a password - we'll do that later!
@@ -58,7 +67,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
     protected function getLoginUrl()
     {
-        // TODO: Implement getLoginUrl() method.
+        return $this->router->generate('app_login');
 
     }
 
