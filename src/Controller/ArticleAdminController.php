@@ -3,16 +3,17 @@
 namespace App\Controller;
 
 
-#use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
+
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Form\ArticleFormType;
 use App\Entity\Article;
 use App\Repository\ArticleRepository;
+
 
 
 class ArticleAdminController extends AbstractController
@@ -29,7 +30,7 @@ class ArticleAdminController extends AbstractController
             /** @var Article $article */
             $article = $form->getData();
 
-            $article->setPublishedAt( \DateType(sprintf('-%d days', rand(1, 200))));
+            $article->setPublishedAt(new \DateTime(sprintf('-%d days', rand(0, 200))));
             $em->persist($article);
             $em->flush();
 

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Read our news {% endblock %}
+
+{% block body %}
+
+    {% for title in article %}
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="comment-img rounded-circle" src="{{ asset('images/boy.png') }}">
+                <div class="comment-container d-inline-block pl-3 align-top">
+                    <span class="commenter-name">Mike Ferengi</span>
+                    <br>
+                    <span class="comment"> {{ title }}</span>
+                    <p><a href="#">Reply</a></p>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+
+{% endblock %}
+
+
+
+
+
