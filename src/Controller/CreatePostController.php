@@ -15,7 +15,7 @@ class CreatePostController extends AbstractController
     public function new(EntityManagerInterface $em)
     {
         $form = $this->createForm(CreatePostFormType::class);
-        return $this->render('create_post/index.html.twig', [
+        return $this->render('create_post/create_post.html.twig', [
             'createPostForm' => $form->createView()
         ]);
     }

@@ -14,7 +14,7 @@ class ProfilePageController extends AbstractController
     public function index()
     {
 
-        return $this->render('profile_page/index.html.twig', [
+        return $this->render('profile_page/profile.html.twig', [
             'controller_name' => 'ProfilePageController',
             'number' => $number = random_int(0, 100),
         ]);
