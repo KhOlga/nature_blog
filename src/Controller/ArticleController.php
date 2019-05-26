@@ -13,16 +13,20 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 
-
-
 class ArticleController extends AbstractController
 {
     /**
      * @Route("/", name="app_homepage")
      */
-    public function homepage()
+    public function homepage(EntityManagerInterface $em)
     {
-        return $this->render('article\homepage.html.twig');
+        $repository = $em->getRepository(Article::class);
+        $articles = $repository->findBy([], ['publishedAt' => 'DESC']);
+
+        return $this->render('article/homepage.html.twig', [
+            'articles' => $articles,
+        ]);
+
     }
 
     public function index()
@@ -50,12 +54,10 @@ class ArticleController extends AbstractController
      */
     public function showArticle($id)
     {
-        $id = rand(2, 8);
+        #$id = rand(1, 55);
         $article = $this->getDoctrine()
             ->getRepository(Article::class)
             ->find($id);
-
-
 
         if (!$article) {
             throw $this->createNotFoundException(

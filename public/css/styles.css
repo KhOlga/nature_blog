@@ -122,10 +122,12 @@ html {height:100%}
 }
 
 .article-img {
-    height: 100px;
-    width: 100px;
+    height: 110px;
+    width: 110px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .article-author-img {

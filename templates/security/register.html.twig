@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Register form
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="col-sm-12 form-signin">
+        {{ form_start(registrationForm) }}
+        {{ form_widget(registrationForm) }}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+            Register
+        </button>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}
+
+
